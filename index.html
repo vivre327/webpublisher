@@ -2,215 +2,228 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monthly Security Report 2018 December</title>
+    <title>Vertical Align Properties</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&display=swap" rel="stylesheet">
 </head>
 <style>
-.msr_wrap ul, .msr_wrap li {
-    list-style: none;
-}
-.msr_wrap div, .msr_wrap P, .msr_wrap a, .msr_wrap h2, .msr_wrap img, .msr_wrap ul,
-.msr_wrap li, .msr_wrap span, .msr_wrap h4 {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.msr_wrap {
-    max-width: 1000px;
-    border: 1px solid #ccc;
-    padding: 33px; 
-    margin: 0 auto;
-    overflow: hidden;
-    font-family: 'NanumSquare', sans-serif; 
-    /*33px*/
-}
-.msr_wrap .msr_date {
-    color: #666;
-    font-weight: 800;
-    font-size: 28px;
-    display: inline-block;
-    padding: 2.5% 0 1.5%;
-    margin: 0;
-    font-family: 'NanumSquare', sans-serif; 
-}
-.msr_wrap .msr_btn {
-    font-size: 16px;
-    display: inline-block;
-    background-color: #0181cc;
-    padding: 1.2% 3%;
-    color: #fff;
-    text-decoration: none;
-    float: right;
-    font-family: 'NanumSquare', sans-serif; 
-}
-.msr_wrap .msr_tit {
-    font-size: 70px;
-    color: #0181cc;
-    margin: 0 0 4.7%;
-    font-weight: 800;
-    font-family: 'NanumSquare', sans-serif; 
-}
-.msr_wrap .msr_left {
-    float: left;
-    width: 62%;
-}
-.msr_wrap .msr_left img {
-    width: 100%;
-}
-.msr_wrap .msr_right {
-    display: inline-block;
-    width: 33%;
-    float: right;
-}
-.msr_wrap li:not(:last-child) {
-    margin-bottom: 8%;
-}
-.msr_wrap li::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-.msr_wrap .msr_contents::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-.msr_wrap .msr_num {
-    display: inline-block;
-    float: left;
-    vertical-align: top;
-    font-size: 18px;
-    color: #666;
-    font-weight: 800;
-    font-family: 'NanumSquare', sans-serif; 
-}
-.msr_wrap .msr_inner {
-    display: inline-block;
-    width: 90%;
-    padding-left: 3%;
-}
-.msr_wrap .msr_subtit {
-    display: inline-block;
-    margin-bottom: 1.8%;
-    font-size: 18px;
-    color: #0181cc;
-    font-weight: 800;
-    font-family: 'NanumSquare', sans-serif; 
-}
-.msr_wrap .msr_cont {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.8;
-    font-family: 'Lato', sans-serif;
-}
-
-/* gte 1028 */
-@media screen and (max-width:1028px) {
-    .msr_wrap .msr_left {
-        float: none;
-        width: 100%;
+    * {
+        font-family: 'Noto Sans KR', sans-serif;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        box-sizing: border-box;
     }
-    .msr_wrap .msr_right {
-        width: 100%;
-        float: none;
-        margin-top: 10%;
+    .container {
+        padding: 10px;
     }
-    .msr_wrap .msr_tit {
-        font-size: 50px;
+    h2 {
+        margin-top: 30px;
+        color: #279cff;
+        letter-spacing: 1px;
+        line-height: 1;
     }
-    .msr_wrap .msr_inner {
-        padding-left: 1%;
+    h3 {
+        margin: 15px 0;
+        font-size: 16px;
+        color: #555;
     }
-    .msr_wrap li:not(:last-child) {
-        margin-bottom: 4%;
+    .flex_wrap {
+        display: flex;
+        border: 1px solid #555;
+        background: #f8f8f1;
     }
-}
-@media screen and (max-width:480px) {
-    .msr_wrap .msr_date {
-        font-size: 20px;
+    .flex_wrap > div {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        color: #fff;
+        text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 100px;
+        background: #46aaff;
+    }    
+    .column {
+        flex-direction: column;
     }
-    .msr_wrap .msr_tit {
-        font-size: 30px;
-        margin-top: 6%;
+    .column-reverse {
+        flex-direction: column-reverse;
     }
-    .msr_wrap .msr_btn {
-        padding: 2.5% 6%; 
-        float: none;
-        position: absolute;
-        top: 0;
-        right: 0;
+    .row {
+        flex-direction: row;
     }
-    .msr_wrap .msr_title {
-        position: relative;
-        padding-top: 4%;
+    .row-reverse {
+        flex-direction: row-reverse;
     }
-    .msr_wrap .msr_inner {
-        padding-left: 4%;
+    .flex_container {
+        display: flex;
+        background: #46aaff;
+        
     }
-}
+    .flex_container > div {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        color: #555;
+        text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 100px;
+        background: #f8f8f1;   
+    }
+    .wrap {
+        flex-wrap: wrap;
+    }
+    .no_wrap {
+        flex-wrap: nowrap;
+    }
+    .flex_flow {
+        flex-flow: row wrap;
+    }
+    .flex_start {
+        justify-content: flex-start;
+    }
+    .center {
+        justify-content: center;
+    }
+    .flex_end {
+        justify-content: flex-end;
+    }
+    .space_between {
+        justify-content: space-between;
+    }
+    .space_around {
+        justify-content: space-between;
+    }
+    .space_evenly {
+        justify-content: space-evenly;
+    }
 </style>
 <body>
-    <div class="msr_wrap">
-        <div class="msr_title">
-            <p class="msr_date">
-                2018 December
-            </p>
-            <a href="http://www.igloosec.co.kr/pdf/igloosec_security_report_201812_en.pdf" class="msr_btn">DOWN</a>
-            <h2 class="msr_tit">Monthly Security Report</h2>
-            
-        </div>
-        <div class="msr_contents">
-            <div class="msr_left">
-                <img src="http://www.igloosec.co.kr/pdf/msr_en_201812.jpg" alt="">
-            </div>
-            <ul class="msr_right">
-                <li>
-                   <span class="msr_num">01</span>
-                    <div class="msr_inner">
-                        <h4 class="msr_subtit">Monthly Security Issue</h4>
-                        <p class="msr_cont">Monthly Security Issue</p>
-                    </div>
-                </li>
-                <li>
-                    <span class="msr_num">02</span>
-                    <div class="msr_inner">
-                        <h4 class="msr_subtit">IGLOO Statistics</h4>
-                        <p class="msr_cont">Monthly Attack Service Trend and Analysis</p>
-                        <p class="msr_cont">Detailed analysis according to different attack patterns</p>
-                    </div>
-                </li>                
-                <li>
-                    <span class="msr_num">03</span>
-                    <div class="msr_inner">
-                        <h4 class="msr_subtit">SIEM Guide (SPiDER TM V5.x)</h4>
-                        <p class="msr_cont">How to use TM’s Human Resource Information Integration</p>
-                    </div>
-                </li>   
-                <li>
-                    <span class="msr_num">04</span>
-                    <div class="msr_inner">
-                        <h4 class="msr_subtit">Tech Note</h4>
-                        <p class="msr_cont">2019’s Security Threats, Prospect and Potential Responses</p>
-                    </div>
-                </li>
-                <li>
-                    <span class="msr_num">05</span>
-                    <div class="msr_inner">
-                        <h4 class="msr_subtit">Special Column</h4>
-                        <p class="msr_cont">Edge Computing, the Alternative to Cloud Environments</p>
-                    </div>
-                </li> 
-                <li>
-                    <span class="msr_num">06</span>
-                    <div class="msr_inner">
-                        <h4 class="msr_subtit">Focus on IGLOO Security</h4>
-                        <p class="msr_cont">This month’s IGLOO Security</p>
-                    </div>
-                </li>            
-            </ul>
-        </div>
+<div class="container">
+    <h2>* column</h2>
+    <h3>Main Axis (주축) : Block 방향 ↓</h3>
+    <div class="flex_wrap column">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
     </div>
+    <h2>* column reverse</h2>
+     <h3>Main Axis (주축) : Block 방향 ↑</h3>
+    <div class="flex_wrap column-reverse">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h2>* row</h2>
+    <h3>Main Axis (주축) : Inline 방향 →</h3>
+    <div class="flex_wrap row">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h2>* row reverse</h2>
+    <h3>Main Axis (주축) : Inline 방향 ←</h3>
+    <div class="flex_wrap row-reverse">   
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h2>* flex wrap : wrap</h2>
+    <h3>resizing될때 container안의 요소들이 밑으로 떨어짐</h3>
+    <div class="flex_container wrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+    <h2>* flex wrap : nowrap</h2>
+    <h3>resizing될때 container폭에 맞게 요소들이 줄어듦</h3>
+    <div class="flex_container no_wrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+    <h2>* flex-flow (축약 속성) </h2>
+    <h3>flex-direction 과 flex-wrap 속성을 flex-flow라는 축약 속성으로 합침 <br/>
+    ex) flex-flow: row wrap; <br/>
+    ex) flex-flow: column nowrap;<br/>
+    아래 예시는 row wrap 적용</h3>
+    <div class="flex_container flex_flow">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+    <h2>* justify-content : flex-start </h2>
+    <h3>시작선부터 정렬 (기본값은 flex-start)</h3>
+    <div class="flex_wrap flex_start">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h2>* justify-content : center </h2>
+    <h3>컨테이너 안의 요소들 중앙정렬</h3>
+    <div class="flex_wrap center">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h2>* justify-content : flex-end </h2>
+    <h3>끝선부터 정렬</h3>
+    <div class="flex_wrap flex_end">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h2>* justify-content : space-between </h2>
+    <h3>여유 공간을 flex 항목 사이의 공간에 균등 배분</h3>
+    <div class="flex_wrap space_between">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h2>* justify-content : space-around </h2>
+    <h3>시작선 및 끝선과 flex 항목간 공간도 균등 배분</h3>
+    <div class="flex_wrap space_around">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h2>* justify-content : space-evenly </h2>
+    <h3>여유 공간을 flex 항목 사이의 공간 및 시작선 및 끝선과 flex 항목 간의 공간에 모두 균등하게 배분</h3>
+    <div class="flex_wrap space_evenly">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</div>
 </body>
 </html>
